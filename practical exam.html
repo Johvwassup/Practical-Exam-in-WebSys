@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pizza by the SLICE</title>
+</head>
+<body>
+	<h2>Pizza by the SLICE</h2>
+	
+	<h3>Personal Details</h3>
+	<div>
+		<label for="fullname">Full Name:</label>
+		<input type="text" id="fullname" name="fullname" minlength="5" maxlength="60" placeholder="Enter your full name here" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" placeholder="Enter your email here" required>
+
+		<label for="phone">Phone Number:</label>
+		<input type="tel" id="phone" name="phone" inputmode="numeric" pattern="[0-9]{7-11}" placeholder="Enter your phone number here" required>
+
+		<label for="age">Age:</label>
+		<input type="number" id="age" name="age" min="13" max="99" placeholder="Enter your age here" required>
+	</div>
+
+	<h3>Build Your Pizza</h3>
+	<div>
+		<input type="radio" id="small" name="size" value="small">
+		<label for="small">Small</label>
+
+		<input type="radio" id="medium" name="size" value="medium" checked>
+		<label for="small">Medium</label>
+
+		<input type="radio" id="large" name="size" value="large">
+		<label for="small">Large</label>
+
+		<input type="radio" id="extra-large" name="size" value="extra-large">
+		<label for="small">Extra-Large</label>
+	</div>
+	<div>
+		<label for="crust">Select Crust Type:</label>
+		<select id="crust" name="crust" required>
+			<option value="" disabled selected>---Choose a Crust---</option>
+			<option value="thin">Thin</option>
+			<option value="thick">Thick</option>
+			<option value="stuffed">Stuffed</option>
+			<option value="gluten-free">Gluten-Free</option>
+		</select>
+	</div>
+	<div>
+		<label for="sauce">Select a Sauce</label>
+		<select id="sauce" name="sauce" required>
+			<option value="" disabled selected>---Choose a Sauce---</option>
+			<optgroup label="Classic">
+				<option value="tomato">Tomato</option>
+				<option value="garlic-white">Garlic-White</option>
+			</optgroup>
+			<optgroup label="Special">
+				<option value="pesto">Pesto</option>
+				<option value="barbeque">Barbeque</option>
+			</optgroup>
+		</select>
+	</div>
+	<div>
+		<label for="toppings">Select Toppings</label>
+		<input type="checkbox" id="cheese" name="toppings-cheese" disabled checked>
+		<label for="cheese">Cheese</label>
+
+		<input type="checkbox" id="onions" name="toppings-onions">
+		<label for="onions">Onions</label>
+
+		<input type="checkbox" id="bacon" name="toppings-bacon">
+		<label for="bacon">Bacon</label>
+
+		<input type="checkbox" id="pepperoni" name="toppings-pepperoni">
+		<label for="pepperoni">Pepperoni</label>
+
+		<input type="checkbox" id="mushroom" name="mushroom">
+		<label for=mushroom">Mushroom</label>
+
+		<input type="checkbox" id="bellpepper" name="bellpepper">
+		<label for="bellpepper">Bellpepper</label>
+
+		<input type="checkbox" id="olives" name="olives">
+		<label for="olives">Olives</label>
+
+		<input type="checkbox" id="pineapple" name="pineapple" title="Warning! Pineapple is controversial.>
+		<label for="pineapple">Pineapple</label>
+	</div>
+
+
+	<h3>Delivery Method</h3>
+	<div>
+		<input type="radio" id="home-delivery" name="delivery-method" value="home-delivery" required>
+		<label for="home-delivery">Home Delivery</label>
+
+		<input type="radio" id="store-pickup" name="delivery-method" value="store-pickup">
+		<label for="store-pickup">Store Pickup</label>
+	</div>
+	<div>
+		<label for="address">Delivery/Pickup Address:</label><br>
+		<textarea type="text" id="address" name="address" rows="3" placeholder="Enter your full address"></textarea>
+	</div>
+
+	<h3>Payment Methods</h3>
+	<div>
+		<label for="payment">Payment Method:</label>
+		<select id="payment" name="payment" required>
+			<option value="" disabled selected>---Select Payment---</option>
+			<option value="card">Credit Card</option>
+			<option value="gcash">GCash</option>
+			<option value="cod">Cash On Delivery</option>
+		</select>
+	</div>
+	<div>
+		<label for="cardnum">Card Number(Required for Credit Card):</label>
+		<input type="text" id="cardnum"  name="cardnum" pattern="[0-9]{16}" placeholder="1234567890123456">
+	</div>
+
+	<div>
+		<table>
+			<tr>
+				<th>Size</th>
+				<th>Base Price</th>
+				<th>Toppings</th>
+			</tr>
+			<tr>
+				<td>Small</td>
+				<td>P199</td>
+				<td>+P20</td>
+			</tr>
+			<tr>
+				<td>Medium</td>
+				<td>P299</td>
+				<td>+P25</td>
+			</tr>
+			<tr>
+				<td>Large</td>
+				<td>P399</td>
+				<td>+30</td>
+			</tr>
+			<tr>
+				<td>Extra-Large</td>
+				<td>P499</td>
+				<td>+P35</td>
+			</tr>
+		</table>	
+	</div>
+	<div>
+		<button type="submit">Place My Order</button>
+		<button type="reset">Start Over</button>
+	</div>
+</body>
+</html>
